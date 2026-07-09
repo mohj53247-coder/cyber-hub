@@ -8,6 +8,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .term-search-wrap{ position:relative; margin-bottom:24px; }
+  .term-search-wrap input{
+    width:100%; padding:14px 44px 14px 16px; border-radius:10px;
+    border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.04);
+    color:inherit; font-family:var(--mono,monospace); font-size:1rem;
+  }
+  .term-search-wrap input:focus{ outline:2px solid var(--amber,#f5a623); outline-offset:2px; }
+  .term-search-wrap .search-icon{ position:absolute; right:16px; top:50%; transform:translateY(-50%); opacity:.6; pointer-events:none; }
+  .no-results{ text-align:center; padding:40px 0; opacity:.7; display:none; }
+  .search-count{ font-size:.85rem; opacity:.65; margin-bottom:16px; }
+  .term.hidden, .glossary-group.hidden{ display:none !important; }
+</style>
 </head>
 <body>
 
@@ -39,6 +52,12 @@
 <section class="section">
   <div class="wrap">
 
+    <div class="term-search-wrap">
+      <input type="text" id="term-search" placeholder="ابحث عن مصطلح... (مثال: تصيّد، VPN، تشفير)" autocomplete="off">
+      <span class="search-icon">🔎</span>
+    </div>
+    <p class="search-count" id="search-count"></p>
+
     <div class="chip-row">
       <button class="chip active" data-filter="all">الكل</button>
       <button class="chip" data-filter="network">🌐 شبكات وبروتوكولات</button>
@@ -50,6 +69,8 @@
       <button class="chip" data-filter="programming">💻 برمجة وسكربتات</button>
       <button class="chip" data-filter="defense">🛡️ دفاع وحماية</button>
     </div>
+
+    <p class="no-results" id="no-results">ما لقينا أي مصطلح مطابق. جرب كلمة بحث مختلفة.</p>
 
     <!-- الشبكات والبروتوكولات -->
     <div class="glossary-group" data-category="network">
@@ -198,5 +219,64 @@
 </footer>
 
 <script src="main.js"></script>
+<script>
+(function(){
+  var searchInput = document.getElementById('term-search');
+  var noResults = document.getElementById('no-results');
+  var searchCount = document.getElementById('search-count');
+  var terms = Array.prototype.slice.call(document.querySelectorAll('.term'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.glossary-group'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+
+  function normalize(str){
+    return (str || '').toLowerCase().trim();
+  }
+
+  function runSearch(){
+    var query = normalize(searchInput.value);
+    var activeChip = document.querySelector('.chip.active');
+    var activeFilter = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+    var visibleCount = 0;
+
+    groups.forEach(function(group){
+      var groupCategory = group.getAttribute('data-category');
+      var categoryMatches = (activeFilter === 'all' || activeFilter === groupCategory);
+      var groupHasVisibleTerm = false;
+
+      var groupTerms = Array.prototype.slice.call(group.querySelectorAll('.term'));
+      groupTerms.forEach(function(term){
+        var nameEl = term.querySelector('.term-name');
+        var enEl = term.querySelector('.term-en');
+        var descEl = term.querySelector('p');
+        var haystack = normalize(
+          (nameEl ? nameEl.textContent : '') + ' ' +
+          (enEl ? enEl.textContent : '') + ' ' +
+          (descEl ? descEl.textContent : '')
+        );
+        var matchesQuery = query === '' || haystack.indexOf(query) !== -1;
+        var shouldShow = categoryMatches && matchesQuery;
+
+        term.classList.toggle('hidden', !shouldShow);
+        if (shouldShow){ groupHasVisibleTerm = true; visibleCount++; }
+      });
+
+      group.classList.toggle('hidden', !groupHasVisibleTerm);
+    });
+
+    noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+    searchCount.textContent = query ? ('عدد النتائج: ' + visibleCount) : '';
+  }
+
+  searchInput.addEventListener('input', runSearch);
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      runSearch();
+    });
+  });
+})();
+</script>
 </body>
 </html>
