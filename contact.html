@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل — AGM-CYBER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="path">~/</span>AGM<span style="color:var(--amber)">-</span>CYBER<span class="cursor"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="articles.html">مقالات</a></li>
+      <li><a href="tiktok.html">تيك توك</a></li>
+      <li><a href="about.html">من أنا</a></li>
+      <li><a href="contact.html">تواصل</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">تواصل معي</span>
+    <h1>عندك سؤال أو اقتراح؟</h1>
+    <p style="max-width:60ch;">راسلني عن أي موضوع أمني تحب أشرحه، أو تعرضت لمشكلة وتحتاج توجيه عام.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap grid grid-2" style="align-items:start;">
+    <form id="contact-form" onsubmit="event.preventDefault(); window.location.href='mailto:contact@agm-cyber.com?subject=' + encodeURIComponent(this.subject.value) + '&body=' + encodeURIComponent(this.message.value + '\n\nمن: ' + this.name.value + ' (' + this.email.value + ')');">
+      <div class="field">
+        <label for="name">الاسم</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div class="field">
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div class="field">
+        <label for="subject">الموضوع</label>
+        <input id="subject" name="subject" type="text" required>
+      </div>
+      <div class="field">
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+    </form>
+
+    <div>
+      <h2 style="margin-bottom:14px;">قنوات أخرى</h2>
+      <ul class="muted-list">
+        <li>TikTok — <a href="https://tiktok.com/@himhim4178" target="_blank" rel="noopener">@himhim4178</a></li>
+        <li>البريد — contact@agm-cyber.com</li>
+      </ul>
+      <p style="margin-top:20px; font-size:.85rem;">
+        ملاحظة: هذا النموذج يفتح تطبيق البريد لديك مباشرة (mailto)، ولا يخزّن بياناتك على أي خادم.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 AGM-CYBER — محتوى توعوي، ليس استشارة أمنية احترافية.</p>
+    <div class="socials">
+      <a href="https://tiktok.com/@himhim4178" target="_blank" rel="noopener">TikTok</a>
+      <a href="contact.html">تواصل</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
