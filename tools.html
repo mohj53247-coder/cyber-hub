@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أدوات دفاعية — AGM-CYBER</title>
+<meta name="description" content="أدوات تفاعلية بسيطة تعمل بالكامل داخل متصفحك: فاحص قوة كلمة المرور، وقائمة تحقق من رسائل التصيّد. لا يتم حفظ أو إرسال أي بيانات.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="path">~/</span>AGM<span style="color:var(--amber)">-</span>CYBER<span class="cursor"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="articles.html">مقالات</a></li>
+      <li><a href="tiktok.html">تيك توك</a></li>
+      <li><a href="glossary.html">قاموس</a></li>
+      <li><a href="tools.html">أدوات</a></li>
+      <li><a href="resources.html">موارد</a></li>
+      <li><a href="about.html">من أنا</a></li>
+      <li><a href="contact.html">تواصل</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">أدوات دفاعية</span>
+    <h1>أدوات تشتغل بالكامل بمتصفحك</h1>
+    <p style="max-width:60ch;">كل الأدوات هنا دفاعية بحتة، ما تحفظ ولا ترسل أي بيانات لأي خادم — كل الحساب يتم محليًا داخل جهازك فقط.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap grid grid-2" style="align-items:start;">
+
+    <div class="tool-card">
+      <span class="tag tag-low" style="margin-bottom:10px; display:inline-block;">أداة</span>
+      <h3>فاحص قوة كلمة المرور</h3>
+      <p class="tool-desc">اكتب كلمة مرور تجريبية وشوف تقييمها الفوري. ما يتم حفظها أو إرسالها لأي مكان — كل شي يصير بمتصفحك فقط.</p>
+      <div class="field" style="margin-bottom:0;">
+        <label for="pw-check">كلمة المرور التجريبية</label>
+        <input id="pw-check" type="text" placeholder="اكتب هنا..." autocomplete="off">
+      </div>
+      <div class="meter"><div class="meter-fill" id="pw-fill"></div></div>
+      <p class="tool-result" id="pw-result">اكتب كلمة مرور تجريبية — ما يتم حفظها أو إرسالها لأي مكان.</p>
+    </div>
+
+    <div class="tool-card">
+      <span class="tag tag-med" style="margin-bottom:10px; display:inline-block;">أداة</span>
+      <h3>قائمة تحقق من رسالة مشبوهة</h3>
+      <p class="tool-desc">قبل ما تضغط على أي رابط أو ترد على رسالة، راجع البنود هذي وحدد اللي ينطبق.</p>
+      <ul class="checklist">
+        <li><input type="checkbox" id="c1"><label for="c1">المرسل يطلب مني إجراء عاجل أو يهددني بإغلاق الحساب</label></li>
+        <li><input type="checkbox" id="c2"><label for="c2">الرابط يبدو مشابه لموقع معروف لكن فيه اختلاف بسيط بالاسم</label></li>
+        <li><input type="checkbox" id="c3"><label for="c3">الرسالة تطلب مني كلمة مرور أو رمز تحقق مباشرة</label></li>
+        <li><input type="checkbox" id="c4"><label for="c4">فيه أخطاء إملائية أو صياغة غريبة بالرسالة</label></li>
+        <li><input type="checkbox" id="c5"><label for="c5">العرض يبدو جيد بشكل مبالغ فيه (جائزة، ربح مفاجئ)</label></li>
+      </ul>
+      <p class="tool-result" style="margin-top:16px;">علّمت على بند أو أكثر؟ <strong style="color:var(--amber)">لا تضغط على أي رابط بالرسالة</strong> وتحقق من الجهة مباشرة عبر قناة رسمية معروفة.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 AGM-CYBER — محتوى توعوي، ليس استشارة أمنية احترافية.</p>
+    <div class="socials">
+      <a href="https://tiktok.com/@himhim4178" target="_blank" rel="noopener">TikTok</a>
+      <a href="contact.html">تواصل</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قاموس المصطلحات — AGM-CYBER</title>
+<meta name="description" content="قاموس شامل لمصطلحات الأمن السيبراني: الشبكات والبروتوكولات، الاستعلام وجمع المعلومات، الهندسة الاجتماعية، الأدلة الجنائية الرقمية، الهندسة العكسية، الهجمات والثغرات، لغات البرمجة، والدفاع.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="path">~/</span>AGM<span style="color:var(--amber)">-</span>CYBER<span class="cursor"></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="articles.html">مقالات</a></li>
+      <li><a href="tiktok.html">تيك توك</a></li>
+      <li><a href="glossary.html">قاموس</a></li>
+      <li><a href="tools.html">أدوات</a></li>
+      <li><a href="resources.html">موارد</a></li>
+      <li><a href="about.html">من أنا</a></li>
+      <li><a href="contact.html">تواصل</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">مرجع شامل</span>
+    <h1>قاموس مصطلحات الأمن السيبراني</h1>
+    <p style="max-width:64ch;">أكثر من ٦٠ مصطلح مبسّط، مقسّمة حسب المجال: من أساسيات الشبكات إلى الهندسة العكسية. محتوى تعريفي وتوعوي بحت — بدون أي أكواد أو أدوات هجومية جاهزة للاستخدام.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+
+    <div class="chip-row">
+      <button class="chip active" data-filter="all">الكل</button>
+      <button class="chip" data-filter="network">شبكات وبروتوكولات</button>
+      <button class="chip" data-filter="osint">استعلام وجمع معلومات</button>
+      <button class="chip" data-filter="social">هندسة اجتماعية</button>
+      <button class="chip" data-filter="forensics">أدلة جنائية رقمية</button>
+      <button class="chip" data-filter="reverse">هندسة عكسية</button>
+      <button class="chip" data-filter="attacks">هجمات وثغرات</button>
+      <button class="chip" data-filter="programming">برمجة وسكربتات</button>
+      <button class="chip" data-filter="defense">دفاع وحماية</button>
+    </div>
+
+    <!-- الشبكات والبروتوكولات -->
+    <div class="glossary-group" data-category="network">
+      <div class="glossary-group-title">
+        <h2>شبكات وبروتوكولات</h2>
+        <span class="count">8 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">بروتوكول TCP/IP</span><span class="term-en">TCP/IP</span></div><p>مجموعة القواعد اللي تنظّم كيف تنتقل البيانات بين الأجهزة على الإنترنت، مقسّمة لطبقات كل وحدة لها مهمة محددة.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">نظام أسماء النطاقات</span><span class="term-en">DNS</span></div><p>يحوّل أسماء المواقع اللي نكتبها (مثل google.com) إلى عناوين IP رقمية يفهمها الجهاز.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الشبكة الافتراضية الخاصة</span><span class="term-en">VPN</span></div><p>نفق مشفّر ينقل بياناتك عبر الإنترنت، يخفي عنوان IP الحقيقي ويحمي البيانات من التنصت على الشبكات العامة.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">جدار الحماية</span><span class="term-en">Firewall</span></div><p>نظام يراقب حركة البيانات الداخلة والخارجة من الشبكة، ويسمح أو يمنع حسب قواعد أمنية محددة مسبقًا.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">بروتوكول HTTPS</span><span class="term-en">HTTPS</span></div><p>نسخة مشفّرة من بروتوكول نقل الصفحات، تحمي البيانات المتبادلة بين المتصفح والموقع من الاعتراض.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">عنوان IP</span><span class="term-en">IP Address</span></div><p>رقم تعريفي فريد لكل جهاز متصل بشبكة، يشبه العنوان البريدي للجهاز على الإنترنت.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">المنفذ الشبكي</span><span class="term-en">Port</span></div><p>نقطة اتصال منطقية على الجهاز تستخدمها الخدمات المختلفة (مثل المتصفح أو البريد) لتبادل البيانات.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">بروتوكول ARP</span><span class="term-en">ARP</span></div><p>يربط عنوان IP بعنوان الجهاز المادي (MAC) داخل الشبكة المحلية نفسها.</p></div>
+      </div>
+    </div>
+
+    <!-- OSINT -->
+    <div class="glossary-group" data-category="osint">
+      <div class="glossary-group-title">
+        <h2>الاستعلام وجمع المعلومات</h2>
+        <span class="count">6 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">الاستخبارات مفتوحة المصدر</span><span class="term-en">OSINT</span></div><p>جمع وتحليل معلومات متاحة للعموم (مواقع، سوشيال ميديا، سجلات عامة) لبناء صورة عن هدف أو موضوع معيّن.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">البصمة الرقمية</span><span class="term-en">Footprinting</span></div><p>الخطوة الأولى بأي تقييم أمني: جمع معلومات عامة عن مؤسسة أو شخص (نطاقات، بريد إلكتروني، بنية تقنية) بدون التفاعل المباشر مع أنظمتها.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">استعلام WHOIS</span><span class="term-en">WHOIS</span></div><p>خدمة عامة تكشف معلومات تسجيل نطاق إنترنت معيّن، مثل تاريخ الإنشاء والجهة المسجِّلة.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">البحث المتقدم بجوجل</span><span class="term-en">Google Dorking</span></div><p>استخدام عوامل بحث متقدمة بمحركات البحث للعثور على معلومات أو ملفات منشورة عن غير قصد وتظهر بنتائج البحث العادية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">تحليل البيانات الوصفية</span><span class="term-en">Metadata Analysis</span></div><p>فحص المعلومات المخفية داخل الملفات (كصور أو مستندات) مثل تاريخ الإنشاء، البرنامج المستخدم، أو الموقع الجغرافي.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">السطح الهجومي</span><span class="term-en">Attack Surface</span></div><p>كل النقاط اللي يمكن لمهاجم يحاول يدخل منها لنظام معيّن: خدمات مكشوفة، حسابات، تطبيقات، أجهزة متصلة.</p></div>
+      </div>
+    </div>
+
+    <!-- الهندسة الاجتماعية -->
+    <div class="glossary-group" data-category="social">
+      <div class="glossary-group-title">
+        <h2>الهندسة الاجتماعية</h2>
+        <span class="count">6 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">الهندسة الاجتماعية</span><span class="term-en">Social Engineering</span></div><p>التلاعب النفسي بالأشخاص لدفعهم يفصحون عن معلومات حساسة أو ينفذون إجراء يخدم المهاجم، بدل استغلال ثغرة تقنية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التصيّد الاحتيالي</span><span class="term-en">Phishing</span></div><p>رسائل أو مواقع مزيفة تنتحل صفة جهة موثوقة لسرقة بيانات دخول أو معلومات مالية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التصيّد الصوتي</span><span class="term-en">Vishing</span></div><p>نوع من التصيّد يتم عبر مكالمة هاتفية، ينتحل فيها المهاجم صفة جهة رسمية (بنك، دعم فني) لخداع الضحية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التصيّد عبر الرسائل النصية</span><span class="term-en">Smishing</span></div><p>تصيّد يتم عبر رسائل SMS تحتوي روابط أو طلبات مزيفة تدفع الضحية لإفشاء معلوماته.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الذريعة الملفّقة</span><span class="term-en">Pretexting</span></div><p>اختلاق المهاجم لقصة أو هوية مزيفة (موظف دعم، زميل عمل) لكسب ثقة الضحية والحصول على معلومات.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الطُعم</span><span class="term-en">Baiting</span></div><p>إغراء الضحية بشيء جذاب (رابط تحميل، فلاشة USB مجهولة) يحمل برمجية ضارة بمجرد استخدامه.</p></div>
+      </div>
+    </div>
+
+    <!-- الأدلة الجنائية الرقمية -->
+    <div class="glossary-group" data-category="forensics">
+      <div class="glossary-group-title">
+        <h2>الأدلة الجنائية الرقمية</h2>
+        <span class="count">6 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">الأدلة الجنائية الرقمية</span><span class="term-en">Digital Forensics</span></div><p>علم جمع وتحليل الأدلة الرقمية بعد وقوع حادثة أمنية، بطريقة تحافظ على صحّتها لاستخدامها كدليل قانوني.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">سلسلة الحيازة</span><span class="term-en">Chain of Custody</span></div><p>توثيق دقيق لكل شخص تعامل مع دليل رقمي ومتى، لضمان عدم التلاعب به من لحظة جمعه حتى استخدامه.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">تحليل الذاكرة</span><span class="term-en">Memory Forensics</span></div><p>فحص محتوى ذاكرة الجهاز (RAM) وقت الحادثة، للكشف عن برمجيات أو عمليات ضارة كانت تعمل لحظتها.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">تحليل السجلات</span><span class="term-en">Log Analysis</span></div><p>دراسة سجلات الأحداث (logs) بالأنظمة لتتبع نشاط مشبوه أو إعادة بناء تسلسل حادثة أمنية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التصوير الجنائي للقرص</span><span class="term-en">Disk Imaging</span></div><p>إنشاء نسخة طبق الأصل من قرص تخزين للتحليل، بدون المساس بالنسخة الأصلية كدليل.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">مؤشر الاختراق</span><span class="term-en">IOC</span></div><p>أثر رقمي (عنوان IP، ملف، توقيع) يدل على وجود نشاط ضار أو اختراق سابق داخل نظام.</p></div>
+      </div>
+    </div>
+
+    <!-- الهندسة العكسية -->
+    <div class="glossary-group" data-category="reverse">
+      <div class="glossary-group-title">
+        <h2>الهندسة العكسية</h2>
+        <span class="count">5 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">الهندسة العكسية</span><span class="term-en">Reverse Engineering</span></div><p>تفكيك برنامج أو ملف لفهم كيف يعمل من الداخل، تُستخدم لتحليل البرمجيات الضارة أو دراسة الثغرات.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التحليل الساكن</span><span class="term-en">Static Analysis</span></div><p>دراسة كود أو ملف برمجي بدون تشغيله فعليًا، بالاعتماد على فحص بنيته ومحتواه فقط.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التحليل الديناميكي</span><span class="term-en">Dynamic Analysis</span></div><p>تشغيل برنامج مشبوه داخل بيئة معزولة ومراقبة سلوكه الفعلي أثناء التشغيل.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">بيئة العزل الآمنة</span><span class="term-en">Sandbox</span></div><p>بيئة افتراضية منفصلة تمامًا عن النظام الأساسي، تُستخدم لتشغيل ملفات مشبوهة بأمان دون التأثير على الجهاز الحقيقي.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">فك التجميع</span><span class="term-en">Disassembly</span></div><p>تحويل الكود الثنائي القابل للتنفيذ إلى لغة أقرب لتركيبة المعالج (Assembly) لفهم منطق عمله.</p></div>
+      </div>
+    </div>
+
+    <!-- الهجمات والثغرات -->
+    <div class="glossary-group" data-category="attacks">
+      <div class="glossary-group-title">
+        <h2>الهجمات والثغرات</h2>
+        <span class="count">8 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">الثغرة الأمنية</span><span class="term-en">Vulnerability</span></div><p>نقطة ضعف في نظام أو تطبيق يمكن استغلالها للوصول أو التسبب بضرر غير مصرّح به.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">ثغرة يوم الصفر</span><span class="term-en">Zero-day</span></div><p>ثغرة مكتشفة حديثًا وما زالت غير معروفة للمطوّر، ما يعني عدم وجود تحديث أمني لسدّها بعد.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الحقن البرمجي بقواعد البيانات</span><span class="term-en">SQL Injection</span></div><p>استغلال ثغرة بإدخال المستخدم لتمرير أوامر غير مقصودة لقاعدة بيانات، ما قد يكشف أو يعدّل بياناتها.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">حقن السكربتات عبر المواقع</span><span class="term-en">XSS</span></div><p>ثغرة تسمح بحقن كود يعمل بمتصفح ضحايا آخرين عند زيارتهم لصفحة متأثرة.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">هجوم حجب الخدمة</span><span class="term-en">DDoS</span></div><p>إغراق خادم أو خدمة بكمية ضخمة من الطلبات لإيقافها عن العمل أو إبطائها بشكل كبير.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">البرمجيات الفدية</span><span class="term-en">Ransomware</span></div><p>برمجية ضارة تشفّر ملفات الضحية وتطالب بفدية مالية مقابل مفتاح فك التشفير.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الرجل في المنتصف</span><span class="term-en">Man-in-the-Middle</span></div><p>هجوم يعترض فيه المهاجم الاتصال بين طرفين دون علمهما، وقد يقرأ أو يعدّل البيانات المتبادلة.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">تعريف الثغرات الموحّد</span><span class="term-en">CVE</span></div><p>معرّف قياسي عالمي يُطلق على كل ثغرة مكتشفة، يسهّل تتبعها والإشارة إليها بين الباحثين والشركات.</p></div>
+      </div>
+    </div>
+
+    <!-- البرمجة والسكربتات -->
+    <div class="glossary-group" data-category="programming">
+      <div class="glossary-group-title">
+        <h2>البرمجة والسكربتات</h2>
+        <span class="count">6 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">بايثون</span><span class="term-en">Python</span></div><p>لغة برمجة سهلة القراءة وواسعة الاستخدام في الأمن السيبراني، بفضل مكتباتها الجاهزة لتحليل البيانات والأتمتة.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">لغة باش</span><span class="term-en">Bash</span></div><p>لغة سكربتات تستخدم للتحكم بأنظمة لينكس عبر سطر الأوامر، شائعة في أتمتة المهام الإدارية والأمنية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">بوويرشيل</span><span class="term-en">PowerShell</span></div><p>لغة سكربتات وأداة إدارة أنظمة خاصة ببيئة ويندوز، تستخدمها فرق الأمن للأتمتة والفحص الإداري.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">لغة سي</span><span class="term-en">C</span></div><p>لغة برمجة منخفضة المستوى قريبة من عتاد الجهاز، مهمة لفهم كيف تُبنى البرمجيات والأنظمة من الأساس.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">لغة الاستعلام الهيكلية</span><span class="term-en">SQL</span></div><p>لغة التخاطب مع قواعد البيانات، فهمها ضروري لفهم كيف تحدث ثغرات مثل حقن قواعد البيانات وكيفية سدّها.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التعبيرات النمطية</span><span class="term-en">Regex</span></div><p>صيغة رمزية لمطابقة وتحليل الأنماط داخل النصوص، تُستخدم كثيرًا بتحليل السجلات واكتشاف الأنماط المشبوهة.</p></div>
+      </div>
+    </div>
+
+    <!-- الدفاع والحماية -->
+    <div class="glossary-group" data-category="defense">
+      <div class="glossary-group-title">
+        <h2>الدفاع والحماية</h2>
+        <span class="count">8 مصطلحات</span>
+      </div>
+      <div class="term-list">
+        <div class="term"><div class="term-head"><span class="term-name">نظام كشف التسلل</span><span class="term-en">IDS</span></div><p>نظام يراقب حركة الشبكة أو النظام ويُنذر عند رصد نشاط مشبوه، دون أن يوقفه بنفسه.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">نظام منع التسلل</span><span class="term-en">IPS</span></div><p>مثل IDS لكنه يتخذ إجراء فوري لمنع النشاط المشبوه بدل مجرد التنبيه عنه.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">إدارة الأحداث والمعلومات الأمنية</span><span class="term-en">SIEM</span></div><p>منصة تجمع سجلات الأمان من مصادر متعددة وتحلّلها لكشف الأنماط المشبوهة بصورة مركزية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الكشف والاستجابة لنقاط النهاية</span><span class="term-en">EDR</span></div><p>أداة تراقب الأجهزة الفردية (حواسيب، سيرفرات) وتكشف السلوك الضار وتستجيب له تلقائيًا.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">الثقة الصفرية</span><span class="term-en">Zero Trust</span></div><p>مبدأ أمني يفترض عدم الثقة بأي جهاز أو مستخدم تلقائيًا، ويتطلب تحقق مستمر لكل طلب وصول.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التشفير</span><span class="term-en">Encryption</span></div><p>تحويل البيانات لصيغة غير مقروءة إلا بمفتاح معيّن، يحمي المعلومات حتى لو وقعت بيد غير مصرّح لها.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">دالة التجزئة</span><span class="term-en">Hashing</span></div><p>تحويل بيانات (مثل كلمة مرور) إلى بصمة رقمية ثابتة الطول لا يمكن عكسها لأصلها، تُستخدم للتحقق دون تخزين البيانات الأصلية.</p></div>
+        <div class="term"><div class="term-head"><span class="term-name">التحقق بخطوتين</span><span class="term-en">2FA / MFA</span></div><p>طبقة حماية إضافية تتطلب إثبات هوية ثاني (رمز، بصمة) بجانب كلمة المرور لتسجيل الدخول.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 AGM-CYBER — محتوى توعوي، ليس استشارة أمنية احترافية.</p>
+    <div class="socials">
+      <a href="https://tiktok.com/@himhim4178" target="_blank" rel="noopener">TikTok</a>
+      <a href="contact.html">تواصل</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

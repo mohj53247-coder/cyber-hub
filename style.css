@@ -271,3 +271,89 @@ footer p{ margin:0; font-family:var(--mono); font-size:.78rem; color:var(--muted
 @media (prefers-reduced-motion: reduce){
   .scanline, .type-cursor, .logo .cursor{ animation:none !important; }
 }
+
+/* ---- category chips / filter ------------------------------------------ */
+
+.chip-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px; }
+.chip{
+  font-family:var(--mono); font-size:.76rem; letter-spacing:.02em;
+  padding:8px 14px; border-radius:20px; border:1px solid var(--border);
+  background:var(--surface); color:var(--muted); cursor:pointer;
+  transition:all .15s;
+}
+.chip:hover{ border-color:var(--cyan); color:var(--text); }
+.chip.active{ background:var(--cyan); border-color:var(--cyan); color:#04211D; font-weight:700; }
+
+/* ---- glossary ------------------------------------------------------------ */
+
+.glossary-group{ margin-bottom:48px; }
+.glossary-group-title{
+  display:flex; align-items:center; gap:12px; margin-bottom:18px;
+}
+.glossary-group-title h2{ margin:0; }
+.glossary-group-title .count{
+  font-family:var(--mono); font-size:.72rem; color:var(--muted-2);
+  border:1px solid var(--border); border-radius:20px; padding:2px 10px;
+}
+.term-list{ display:flex; flex-direction:column; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+.term{
+  padding:18px 20px; border-bottom:1px solid var(--border);
+  background:var(--surface);
+}
+.term:last-child{ border-bottom:none; }
+.term-head{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+.term-name{ font-family:var(--mono); font-weight:700; font-size:1rem; color:var(--text); }
+.term-en{ font-family:var(--mono); font-size:.74rem; color:var(--muted-2); }
+.term p{ margin:0; font-size:.92rem; }
+
+/* ---- tools --------------------------------------------------------------*/
+
+.tool-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:6px;
+  padding:26px;
+}
+.tool-card h3{ margin-bottom:6px; }
+.tool-card .tool-desc{ font-size:.88rem; margin-bottom:20px; }
+.meter{
+  height:8px; border-radius:4px; background:var(--surface-2);
+  border:1px solid var(--border); overflow:hidden; margin:10px 0;
+}
+.meter-fill{ height:100%; width:0%; background:var(--red); transition:width .25s, background .25s; }
+.tool-result{ font-family:var(--mono); font-size:.82rem; color:var(--muted); min-height:1.4em; }
+.tool-result strong{ color:var(--text); }
+.checklist{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+.checklist li{ display:flex; align-items:flex-start; gap:10px; font-size:.9rem; color:var(--muted); }
+.checklist input[type=checkbox]{ margin-top:4px; accent-color:var(--cyan); width:16px; height:16px; flex:0 0 auto; }
+
+/* ---- resources -----------------------------------------------------------*/
+
+.resource-row{
+  display:flex; justify-content:space-between; align-items:center; gap:14px;
+  padding:16px 0; border-bottom:1px solid var(--border);
+}
+.resource-row:last-child{ border-bottom:none; }
+.resource-row .rname{ font-weight:600; color:var(--text); }
+.resource-row .rdesc{ font-size:.85rem; color:var(--muted); margin:2px 0 0; }
+
+/* ---- newsletter -----------------------------------------------------------*/
+
+.newsletter{
+  background:linear-gradient(180deg, var(--surface), var(--surface-2));
+  border:1px solid var(--border); border-radius:8px;
+  padding:36px 28px; text-align:center;
+}
+.newsletter h2{ margin-bottom:8px; }
+.newsletter-form{ display:flex; gap:10px; max-width:420px; margin:22px auto 0; flex-wrap:wrap; justify-content:center; }
+.newsletter-form input{
+  flex:1; min-width:200px; background:var(--bg); border:1px solid var(--border);
+  border-radius:var(--radius); padding:12px 14px; color:var(--text); font-family:var(--sans);
+}
+.newsletter-form input:focus{ border-color:var(--cyan); outline:none; }
+
+/* ---- stat strip -----------------------------------------------------------*/
+
+.stat-strip{ display:flex; gap:0; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+.stat{ flex:1; text-align:center; padding:22px 10px; border-inline-end:1px solid var(--border); }
+.stat:last-child{ border-inline-end:none; }
+.stat .num{ font-family:var(--mono); font-size:1.6rem; font-weight:700; color:var(--cyan); }
+.stat .lbl{ font-family:var(--mono); font-size:.7rem; color:var(--muted-2); letter-spacing:.06em; margin-top:4px; }
